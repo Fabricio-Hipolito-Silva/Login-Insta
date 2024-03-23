@@ -4,12 +4,31 @@
 
 <ion-content [fullscreen]="true">
   
-    
-      <ion-select aria-label="Fruit" interface="popover" placeholder="Select fruit">
-        <ion-select-option value="apples">Apples</ion-select-option>
-        <ion-select-option value="oranges">Oranges</ion-select-option>
-        <ion-select-option value="bananas">Bananas</ion-select-option>
+    <div class="teste">
+      <ion-select laria-label="Lingua" interface="popover" placeholder="Selecione a Língua">
+        <ion-select-option value="apples">Português (BR)</ion-select-option>
+        <ion-select-option value="oranges">Inglês</ion-select-option>
+        <ion-select-option value="bananas">Macaques</ion-select-option>
       </ion-select>
-    
+    </div>
+
+    <img src="../../assets/Instagram_logo.png">
+
+    <ion-input placeholder="Número de Telefone, email ou nome de usuário" fill="solid"> </ion-input>
+    <br>
+    <ion-input placeholder="Senha" fill="solid"> </ion-input>
+    <br>
+    <ion-button expand="full">Full</ion-button>
+    <br>
+    <p>Esqueceu seus dados de Login? <a routerLink="/teste">Obtenha ajuda para entrar</a> </p>
+    <ion-item-divider>
+      <div class="divider-text">OU</div>
+    </ion-item-divider>
+    <ion-button expand="full"> <ion-icon name="logo-facebook" slot="start"></ion-icon> Continuar como Gay Maestro</ion-button>
+    <br>
+    <div class="divider-text"></div>
+    <p>Não tem uma conta? <a routerLink="/cadastro">Cadastre-se</a> </p>
+
+
 
 </ion-content>
