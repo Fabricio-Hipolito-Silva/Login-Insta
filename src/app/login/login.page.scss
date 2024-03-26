@@ -1,3 +1,5 @@
+
+
 .teste {
     display: block;
     width: fit-content;
@@ -31,4 +33,37 @@
   }
   a{
     color: white;
+  }
+  .divider::after, .divider::before {
+    background-color: #6c6c6c;
+    content: '';
+    height: 1px;
+    margin: 0 1em;
+    width: 100%;
+    opacity: 80%;
+    
+  }
+  .divider {
+    display: flex;
+    align-items: center;
+  }
+  .facebook{
+    margin-left: auto;
+    margin-right: auto;
+    width: 370px;
+  }
+
+  .p2{
+    position: relative; 
+    bottom: -250px;
+  }
+  .sem-conta{
+    margin-right: auto;
+    margin-left: auto;  
+    width: 370px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(168, 164, 164);
+   
+    
   }
