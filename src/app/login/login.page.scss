@@ -7,4 +7,28 @@
       .button-custom ion-icon {
         margin-right: 8px; /* Ajuste o valor conforme necessário */
       }
-  
+  .input{
+    width: 370px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 30%;
+    --background: rgba(128, 128, 128, 0.793);
+    opacity: 90%;
+  }
+  .entrar{
+    margin-left: auto;
+    margin-right: auto;
+    width: 370px;
+  }
+
+  .p1{
+    margin-right: auto;
+    margin-left: auto;
+    width: 370px;
+    text-align: center;
+    font-size: 14px;
+    color: rgb(168, 164, 164);
+  }
+  a{
+    color: white;
+  }
