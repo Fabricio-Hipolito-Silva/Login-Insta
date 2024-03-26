@@ -5,6 +5,7 @@
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+
       }
       .button-custom ion-icon {
         margin-right: 8px; /* Ajuste o valor conforme necessário */
@@ -21,6 +22,9 @@
     margin-left: auto;
     margin-right: auto;
     width: 370px;
+    border-radius: 40%;
+    text-transform: none;
+
   }
 
   .p1{
@@ -47,15 +51,21 @@
     display: flex;
     align-items: center;
   }
-  .facebook{
+
+  ion-button.facebook{
+    --background: transparent;
     margin-left: auto;
     margin-right: auto;
     width: 370px;
-  }
+    color: inherit;
+    color: rgb(38, 139, 255);
+    text-transform: none;
+
+    }
 
   .p2{
     position: relative; 
-    bottom: -250px;
+    bottom: -230px;
   }
   .sem-conta{
     margin-right: auto;
