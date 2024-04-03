@@ -15,13 +15,17 @@
 
   <div class="conteudo">
     <img id="imagen" src="../../assets/Instagram_logo.png">
-
-    <ion-input [(ngModel)]="login" class="input" placeholder="Número de Telefone, email ou nome de usuário" fill="solid"> </ion-input>
+    <form>
+    <ion-input [(ngModel)]="loginl" class="input" placeholder="Número de Telefone, email ou nome de usuário" fill="solid" [ngModelOptions]="{standalone: true}"></ion-input>
     <br>
-    <ion-input [(ngModel)]="senha" class="input" placeholder="Senha" fill="solid"> </ion-input>
+    <ion-input type="password" [(ngModel)]="senhal" class="input" placeholder="Senha" fill="solid" [ngModelOptions]="{standalone: true}"></ion-input>
     <br>
-    <ion-button class="entrar" expand="block" routerLink="/bemvindo" (click)="valorLogin()">Entrar</ion-button>
+    <ion-button class="entrar" expand="block" (click)="logar()" [disabled]="!loginl || !senhal">Entrar</ion-button>
     <br>
+    </form>
+    <div *ngIf="erroLogin" class="mensagem-erro">
+      Senha incorreta. Por favor, tente novamente.
+    </div>
 
     <div class="p1">
     <p>Esqueceu seus dados de Login?<a routerLink="/teste">Obtenha ajuda para entrar</a> </p>

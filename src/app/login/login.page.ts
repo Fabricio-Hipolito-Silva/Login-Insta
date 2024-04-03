@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute } from '@angular/router';
-//Precisa Importar essas classes para o serviço router do angular funcionar
 
 @Component({
   selector: 'app-login',
@@ -9,18 +8,27 @@ import { Router, ActivatedRoute } from '@angular/router';
 })
 export class LoginPage implements OnInit {
 
- login: string = "";
- senha: string = "";
+  login: string = "";
+  senha: string = "";
+  loginl: string = "";
+  senhal:string = "";
+  erroLogin:boolean = false;
 
-  constructor(private router: Router, private activatedRoute: ActivatedRoute) { } //Precisa injetar essas depêndencias no constructor
+  constructor(private router: Router, private activatedRoute: ActivatedRoute) { }
 
-  valorLogin() {
-    this.router.navigate(['/bemvindo'], { queryParams: { login: this.login, senha: this.senha} });
-    //A linha acima está indo até o bemvindo, jogando o valor de login e senha, em variaveis chamadas login e senha. e mandando elas como
-    //parâmetro para ver na pag bemvindo
+  logar() {
+   if (this.loginl == this.login && this.senhal == this.senha) {
+    this.router.navigate(['/bemvindo'], { queryParams: { login: this.login, senha: this.senha } });
+   }
+   else{
+    this.erroLogin = true
+   }
   }
 
-  ngOnInit() {}
-};
-  
-
+  ngOnInit() {
+    this.activatedRoute.queryParams.subscribe(params => { 
+      this.login = params['login'];
+      this.senha = params['senha'];
+    });
+  }
+}
