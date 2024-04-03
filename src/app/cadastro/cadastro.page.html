@@ -1,14 +1,17 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>cadastro</ion-title>
-  </ion-toolbar>
+
 </ion-header>
 
 <ion-content [fullscreen]="true">
+
+  <p class="escolha_usuario">Escolha um nome de usuário e senha</p>
+  <p class="alterar">Você pode alterá-lo quando quiser</p>
   <form>
     <ion-input [(ngModel)]="login" class="input"  fill="solid" placeholder="Insira seu nome, login blablabla" [ngModelOptions]="{standalone: true}"></ion-input>
+    <br>
     <ion-input type="password" [(ngModel)]="senha" class="input" fill="solid" placeholder="Insira sua senha" [ngModelOptions]="{standalone: true}"></ion-input>
-    <ion-button expand="block" (click)="cadastrar()" [disabled]="!login || !senha">Cadastrar</ion-button>
+    <br>
+    <ion-button class="cadastrar_" expand="block" (click)="cadastrar()" [disabled]="!login || !senha">Cadastrar</ion-button>
 
   </form>
 </ion-content>
