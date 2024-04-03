@@ -23,7 +23,7 @@
     <ion-button class="entrar" expand="block" (click)="logar()" [disabled]="!loginl || !senhal">Entrar</ion-button>
     <br>
     </form>
-    <div *ngIf="erroLogin" class="mensagem-erro">
+    <div *ngIf="erroLogin">
       Senha incorreta. Por favor, tente novamente.
     </div>
 
